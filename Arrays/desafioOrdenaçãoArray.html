@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Arrays</title>
+
+    <script>
+        var objetos = ['cadeira','impressora', 'garfo']
+
+        function Adicionar(){
+            entrada_dados = document.getElementById('texto').value
+    
+
+            if (entrada_dados !== ''){
+                
+                if (objetos.indexOf(entrada_dados) !== -1){
+                    alert('Objeto já foi adicionado')
+
+                } else{
+                objetos.push(entrada_dados)
+                console.log(objetos)
+
+                }
+                        
+            }       
+                else{
+                    document.getElementById(entrada_dados).value=''
+                    alert('Informe valor válido')
+    
+                }
+                   
+        }
+        
+
+        function Ordenar(){
+            objetos.sort()
+            console.log(objetos)
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <input id="texto" type="text">
+
+    <button onclick="Adicionar()"> Adicionar </button>
+    <button onclick="Ordenar()"> Ordenar</button>
+</body>
+</html>
